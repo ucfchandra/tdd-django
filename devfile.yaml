@@ -1,7 +1,7 @@
 schemaVersion: 2.2.0
 metadata:
-  name: django-5-example
-  displayName: Django-5-Example
+  name: django-5-goat
+  displayName: Django-5-goat
   description: "Django is a high level Python web framework that enables rapid development of web applications and microservices."
   icon: https://static.djangoproject.com/img/logos/django-logo-positive.svg
   tags:
@@ -38,7 +38,7 @@ commands:
   - id: pip-install-requirements-and-run-migrations
     exec:
       commandLine: 'pip install --upgrade pip --root-user-action=ignore --quiet && pip install -r requirements.txt --root-user-action=ignore --quiet && python manage.py migrate'
-      workingDir: ${PROJECT_SOURCE}/app
+      workingDir: ${PROJECT_SOURCE}/superlists
       group:
         kind: build
         isDefault: true
@@ -47,7 +47,7 @@ commands:
   - id: run-app
     exec:
       commandLine: 'python manage.py runserver 0.0.0.0:8000'
-      workingDir: ${PROJECT_SOURCE}/app
+      workingDir: ${PROJECT_SOURCE}/superlists
       component: py-web
       group:
         kind: run
